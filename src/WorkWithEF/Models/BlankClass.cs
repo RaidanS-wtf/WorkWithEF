@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WorkWithEF.ViewModels
+namespace WorkWithEF.Models
 {
-    public class TaskViewModel
+    public abstract class BlankClass
     {
+        public int Id {get;set;}
         public string Name { get; set; }
         public string Description { get; set; }
-        public string Performer { get; set; }
     }
 }

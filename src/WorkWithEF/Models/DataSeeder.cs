@@ -18,10 +18,10 @@ namespace WorkWithEF.Models
             if (!_context.Tasks.Any())
             {
                 _context.Tasks.AddRange(
-                    new Task { Id = 1, Title = "NumverOne", Description = "First task", Performer="employee1" },
-                    new Task { Id = 2, Title = "NumverTwo", Description = "Second task", Performer = "employee1" },
-                    new Task { Id = 3, Title = "NumverThree", Description = "Third task", Performer = "employee2" },
-                    new Task { Id = 4, Title = "NumverFour", Description = "fourth task", Performer = "employee2" }
+                    new Task { Id = 1, Name = "NumverOne", Description = "First task", Performer="employee1" },
+                    new Task { Id = 2, Name = "NumverTwo", Description = "Second task", Performer = "employee1" },
+                    new Task { Id = 3, Name = "NumverThree", Description = "Third task", Performer = "employee2" },
+                    new Task { Id = 4, Name = "NumverFour", Description = "fourth task", Performer = "employee2" }
                 );
 
                 _context.SaveChanges();

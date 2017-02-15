@@ -5,11 +5,8 @@ using System.Threading.Tasks;
 
 namespace WorkWithEF.Models
 {
-    public class Task
+    public class Task : BlankClass
     {
-        public int Id { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
         public string Performer { get; set; }
     }
 }

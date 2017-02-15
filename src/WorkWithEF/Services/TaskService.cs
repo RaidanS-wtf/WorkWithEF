@@ -10,15 +10,19 @@ namespace WorkWithEF.Services
     public class TaskService : ITaskService
     {
         private readonly DataContext _context;
+        private readonly IMapper _mapper;
 
-        public TaskService(DataContext context)
+        public TaskService(DataContext context, IMapper mapper)
         {
             _context = context;
+            _mapper = mapper;
         }
 
-        public IEnumerable<Task> GetAll()
+        public IEnumerable<TaskViewModel> GetAll()
         {
-            return _context.Tasks;
+            var tasks = _mapper.Map<IEnumerable<Task>, IEnumerable<TaskViewModel>>(_context.Tasks.ToList());
+
+            return tasks;
         }
     }
 }
