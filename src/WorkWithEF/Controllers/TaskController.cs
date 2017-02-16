@@ -7,14 +7,13 @@ using WorkWithEF.Services;
 
 namespace WorkWithEF.Controllers
 {
-    public class EditTaskController : Controller
+    public class TaskController : Controller
     {
         private readonly ITaskService _taskService;
-        public EditTaskController(ITaskService taskService)
+        public TaskController(ITaskService taskService)
         {
             _taskService = taskService;
         }
-        // GET: /<controller>/
         public IActionResult Index()
         {
             return View();
@@ -23,10 +22,10 @@ namespace WorkWithEF.Controllers
         {
             return View();
         }
-        public IActionResult Edit(int taskId)
+        public IActionResult Edit(int id)
         {
-            var task = _taskService.GetOne(taskId);
-            return View(task);
+            var currentTask = _taskService.GetOne(id);
+            return View(currentTask);
         }
     }
 }

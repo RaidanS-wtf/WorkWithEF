@@ -207,8 +207,8 @@
 -resource:"C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\obj\Debug\netcoreapp1.0\WorkWithEFdotnet-compile.deps.json",WorkWithEF.deps.json
 "C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Program.cs"
 "C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Startup.cs"
-"C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Controllers\EditTaskController.cs"
 "C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Controllers\HomeController.cs"
+"C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Controllers\TaskController.cs"
 "C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Mapping\MappingProfile.cs"
 "C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Migrations\20170208095319_InitialCreate.cs"
 "C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Migrations\20170208095319_InitialCreate.Designer.cs"
