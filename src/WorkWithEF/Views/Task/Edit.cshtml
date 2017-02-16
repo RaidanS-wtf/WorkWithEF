@@ -3,15 +3,15 @@
 @model TaskViewModel
 
 @{
-    ViewBag.Title = "EditTasks";
+    ViewBag.Title = "Edit Tasks";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>Edit task #@ViewBag.taskId</h2>
+<h2>Edit task @Model.Id</h2>
 
 <form action="/" method="post">
-    <input type="hidden" name="taskId" value="@ViewBag.task.Id" />
-    <input type="text" name="taskName" value="@ViewBag.task.Name" />
-    <input type="text" name="taskDescription" value="@ViewBag.task.Description" />
-    <input type="text" name="taskPerformer" value="@ViewBag.task.Performer" />
+    <input type="hidden" name="taskId" value="@Model.Id" />
+    <input type="text" name="taskName" value="@Model.Name" />
+    <input type="text" name="taskDescription" value="@Model.Description" />
+    <input type="text" name="taskPerformer" value="@Model.Performer" />
     <input type="submit" name="submit" value="End editing" />
 </form>
