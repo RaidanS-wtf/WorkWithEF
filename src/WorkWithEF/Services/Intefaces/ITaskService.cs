@@ -9,5 +9,6 @@ namespace WorkWithEF.Services
     public interface ITaskService
     {
         IEnumerable<TaskViewModel> GetAll();
+        TaskViewModel GetOne(int taskId);
     }
 }

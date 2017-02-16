@@ -24,5 +24,12 @@ namespace WorkWithEF.Services
 
             return tasks;
         }
+        public TaskViewModel GetOne(int taskId)
+        {
+            var task = _context.Tasks.First(oneTask => oneTask.Id == taskId);
+
+            var currentTask = _mapper.Map<Task, TaskViewModel>(task);
+            return currentTask;
+        }
     }
 }
