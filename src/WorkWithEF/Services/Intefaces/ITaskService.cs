@@ -12,5 +12,6 @@ namespace WorkWithEF.Services
         TaskViewModel GetOne(int taskId);
         void EditTask(TaskViewModel editTask);
         void CreateTask(TaskViewModel createTask);
+        void DeleteTask(TaskViewModel deleteTask);
     }
 }

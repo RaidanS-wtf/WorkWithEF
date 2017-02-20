@@ -14,9 +14,14 @@
 input,
 select,
 textarea {
+    display: inline-block;
     max-width: 280px;
+    padding:5px;
 }
 
+table td {
+    border-spacing: 5px;
+}
 /* Carousel */
 .carousel-caption p {
     font-size: 20px;

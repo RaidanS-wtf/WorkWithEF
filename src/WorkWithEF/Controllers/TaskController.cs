@@ -40,5 +40,16 @@ namespace WorkWithEF.Controllers
             _taskService.EditTask(editTask);
             return RedirectToAction("Index");
         }
+        public IActionResult Delete(int id)
+        {
+            var currentTask = _taskService.GetOne(id);
+            return View(currentTask);
+        }
+        [HttpPost]
+        public IActionResult CommitDelete(TaskViewModel deleteTask)
+        {
+            _taskService.DeleteTask(deleteTask);
+            return RedirectToAction("Index");
+        }
     }
 }

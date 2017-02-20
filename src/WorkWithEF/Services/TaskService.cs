@@ -46,6 +46,13 @@ namespace WorkWithEF.Services
             _context.Tasks.Update(foundedTask);
             _context.SaveChanges();
         }
-        
+        public void DeleteTask(TaskViewModel deleteTask)
+        {
+            var foundedTask = _context.Tasks.First(t => t.Id == deleteTask.Id);
+            _mapper.Map(deleteTask, foundedTask);
+            _context.Tasks.Remove(foundedTask);
+            _context.SaveChanges();
+        }
+
     }
 }

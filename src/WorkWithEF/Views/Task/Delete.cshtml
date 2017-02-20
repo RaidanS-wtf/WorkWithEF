@@ -1,0 +1,22 @@
+﻿@using System.Collections.Generic
+@using WorkWithEF.ViewModels
+@model TaskViewModel
+
+@{
+    ViewBag.Title = "Delete Task";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>Do you want to delete task @Model.Id</h2>
+
+@using (Html.BeginForm("CommitDelete", "Task"))
+{
+    @Html.Hidden("Id", @Model.Id);
+    @Html.Hidden("Name", @Model.Name);
+    @Html.LabelFor(t => t.Name);
+    @Html.Hidden("Description", @Model.Description);
+    @Html.LabelFor(t => t.Description);
+    @Html.Hidden("Performer", @Model.Performer);
+    @Html.LabelFor(t => t.Performer);
+
+    <input type="submit" name="submit" value="Delete item" />
+}
