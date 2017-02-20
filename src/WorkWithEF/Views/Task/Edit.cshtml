@@ -8,10 +8,13 @@
 }
 <h2>Edit task @Model.Id</h2>
 
-<form action="/" method="post">
-    <input type="hidden" name="taskId" value="@Model.Id" />
-    <input type="text" name="taskName" value="@Model.Name" />
-    <input type="text" name="taskDescription" value="@Model.Description" />
-    <input type="text" name="taskPerformer" value="@Model.Performer" />
+@using (Html.BeginForm("CommitEdit", "Task"))
+{
+    @Html.Hidden("Id", @Model.Id);
+    @Html.TextBox("Name", @Model.Name);
+    @Html.TextBox("Description", @Model.Description);
+    @Html.TextBox("Performer", @Model.Performer);
+
+    //@Html.TextBox("taskName", @Model.Id);
     <input type="submit" name="submit" value="End editing" />
-</form>
+}

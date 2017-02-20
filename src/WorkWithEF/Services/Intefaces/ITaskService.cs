@@ -10,5 +10,6 @@ namespace WorkWithEF.Services
     {
         IEnumerable<TaskViewModel> GetAll();
         TaskViewModel GetOne(int taskId);
+        void EditTask(TaskViewModel editTask);
     }
 }

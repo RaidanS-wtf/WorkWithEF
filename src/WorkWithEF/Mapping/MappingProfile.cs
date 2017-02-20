@@ -9,6 +9,8 @@ namespace WorkWithEF.Mapping
         {
             CreateMap<Task, TaskViewModel>();
             CreateMap<Bug, BugViewModel>();
+            CreateMap<TaskViewModel, Task>();
+            CreateMap<BugViewModel, Bug>();
         }
     }
 }

@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using WorkWithEF.Services;
+using WorkWithEF.ViewModels;
 
 namespace WorkWithEF.Controllers
 {
@@ -26,6 +26,12 @@ namespace WorkWithEF.Controllers
         {
             var currentTask = _taskService.GetOne(id);
             return View(currentTask);
+        }
+        [HttpPost]
+        public IActionResult CommitEdit(TaskViewModel editTask)
+        {
+            _taskService.EditTask(editTask);
+            return RedirectToAction("Index");
         }
     }
 }

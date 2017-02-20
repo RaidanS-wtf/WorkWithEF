@@ -31,5 +31,12 @@ namespace WorkWithEF.Services
             var currentTask = _mapper.Map<Task, TaskViewModel>(task);
             return currentTask;
         }
+        public void EditTask(TaskViewModel editTask)
+        {
+            var foundedTask = _context.Tasks.First(t => t.Id == editTask.Id);
+            foundedTask = _mapper.Map<TaskViewModel, Task>(editTask);
+            _context.Tasks.Update(foundedTask);
+            _context.SaveChanges();
+        }
     }
 }
