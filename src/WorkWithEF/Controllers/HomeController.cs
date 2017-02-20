@@ -17,8 +17,7 @@ namespace WorkWithEF.Controllers
         }
         public IActionResult Index()
         {
-            var tasks = _taskService.GetAll();
-            return View(tasks);
+            return View();
         }
 
         public IActionResult About()

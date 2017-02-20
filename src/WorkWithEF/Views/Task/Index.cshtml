@@ -1,4 +1,27 @@
-﻿@{
+﻿@using System.Collections.Generic
+@using WorkWithEF.ViewModels
+@model IEnumerable<TaskViewModel>
+@{
     ViewData["Title"] = "Index Page for Tasks";
 }
 <h1>@ViewData["Title"]</h1>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Performer</th>
+    </tr>
+
+    @foreach (var task in Model)
+    {
+        <tr>
+            <td>@task.Name</td>
+            <td>@task.Description</td>
+            <td>@task.Performer</td>
+            <td><a href="/task/edit/@task.Id">Edit task</a></td>
+        </tr>
+    }
+</table>
+<br>
+@Html.ActionLink("Create new Task", "create")

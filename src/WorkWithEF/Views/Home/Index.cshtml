@@ -7,26 +7,7 @@
 }
 
 <h1>Tasks & Bugs</h1>
-@foreach (var task in Model)
-{
-    <h4>@task.Name</h4>
-}
 
-<table>
-    <tr>
-        <th>Title</th>
-        <th>Description</th>
-        <th>Performer</th>
-    </tr>
-
-    @foreach (var bug in Model)
-    {
-        <tr>
-            <td>@bug.Name</td>
-            <td>@bug.Description</td>
-            <td>@bug.Performer</td>
-            <td><a href="/task/edit/@bug.Id">Edit task</a></td>
-</tr>
-    }
-
-</table>
+<a href="/task/index">Task`s list</a>
+<br>
+<a href="/bug/index">Bug`s list</a>

@@ -16,11 +16,18 @@ namespace WorkWithEF.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            var tasks = _taskService.GetAll();
+            return View(tasks);
         }
         public IActionResult Create()
         {
             return View();
+        }
+        [HttpPost]
+        public IActionResult CommitCreate(TaskViewModel createTask)
+        {
+            _taskService.CreateTask(createTask);
+            return RedirectToAction("Index");
         }
         public IActionResult Edit(int id)
         {

@@ -1,0 +1,26 @@
+﻿@using System.Collections.Generic
+@using WorkWithEF.ViewModels
+@model IEnumerable<BugViewModel>
+@{
+    ViewData["Title"] = "Index Page for Bugs";
+}
+<h1>@ViewData["Title"]</h1>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Author</th>
+    </tr>
+
+    @foreach (var bug in Model)
+    {
+        <tr>
+            <td>@bug.Name</td>
+            <td>@bug.Description</td>
+            <td>@bug.Author</td>
+            <td><a href="/task/edit/@bug.Id">Edit bug</a></td>
+        </tr>
+    }
+
+</table>

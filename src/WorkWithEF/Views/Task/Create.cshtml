@@ -1,5 +1,17 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@using System.Collections.Generic
+@using WorkWithEF.ViewModels
+
 @{
+    ViewBag.Title = "Create new task";
+}
+<h2>Create new task</h2>
+
+@using (Html.BeginForm("CommitCreate", "Task"))
+{
+    @Html.Hidden("Id");
+    @Html.TextBox("Name");
+    @Html.TextBox("Description");
+    @Html.TextBox("Performer");
+
+    <input type="submit" name="submit" value="Create!" />
 }
