@@ -33,11 +33,12 @@ namespace WorkWithEF.Services
         }
         public void CreateTask(TaskViewModel createTask)
         {
-            var lastTask = _context.Tasks.Last();
-            createTask.Id = (lastTask.Id + 1);
-           var newTask = _mapper.Map<TaskViewModel, Task>(createTask);
-            _context.Tasks.Add(newTask);
-            _context.SaveChanges();
+                var lastTask = _context.Tasks.Last();
+                createTask.Id = (lastTask.Id + 1);
+                var newTask = _mapper.Map<TaskViewModel, Task>(createTask);
+                _context.Tasks.Add(newTask);
+                _context.SaveChanges();
+            
         }
         public void EditTask(TaskViewModel editTask)
         {

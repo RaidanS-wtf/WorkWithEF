@@ -26,8 +26,16 @@ namespace WorkWithEF.Controllers
         [HttpPost]
         public IActionResult CommitCreate(TaskViewModel createTask)
         {
-            _taskService.CreateTask(createTask);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                _taskService.CreateTask(createTask);
+                return RedirectToAction("Index"); //RedirectToAction("Create");
+            }
+            using (var db = new DataContext())
+            {
+                TaskViewModel.Tasks = db.Tasks.ToList();
+            }
+            return View(TaskViewModel);
         }
         public IActionResult Edit(int id)
         {
