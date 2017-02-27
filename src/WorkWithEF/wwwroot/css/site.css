@@ -1,6 +1,13 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿html, body {
+    height:100%;
+    width:100%;
+    margin:0;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+body {
+    padding:10px;
+    position:relative;
 }
 
 /* Wrapping element */
@@ -40,4 +47,9 @@ table td {
   .carousel-caption {
     display: none
   }
+}
+.copyright {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
 }
