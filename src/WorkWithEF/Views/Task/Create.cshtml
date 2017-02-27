@@ -1,12 +1,13 @@
 ﻿@using System.Collections.Generic
 @using WorkWithEF.ViewModels
+@model TaskViewModel
 
 @{
     ViewBag.Title = "Create new task";
 }
 <h2>Create new task</h2>
 
-<form asp-controller="TaskController" asp-action="CommitCreate">
+<form asp-controller="Task" asp-action="CommitCreate">
     <table>
         <tr>
             <td><label asp-for="Name"></label></td>
@@ -28,13 +29,3 @@
         </tr>
     </table>
 </form>
-
-@using (Html.BeginForm("CommitCreate", "Task"))
-{
-    @Html.Hidden("Id");
-    @Html.TextBox("Name");
-    @Html.TextBox("Description");
-    @Html.TextBox("Performer");
-
-    <input type="submit" name="submit" value="Create!" />
-}

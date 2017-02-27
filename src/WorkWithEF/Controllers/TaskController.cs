@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using WorkWithEF.Services;
+using WorkWithEF.Models;
 using WorkWithEF.ViewModels;
 
 namespace WorkWithEF.Controllers
@@ -29,13 +30,9 @@ namespace WorkWithEF.Controllers
             if (ModelState.IsValid)
             {
                 _taskService.CreateTask(createTask);
-                return RedirectToAction("Index"); //RedirectToAction("Create");
+                return RedirectToAction("Index");
             }
-            using (var db = new DataContext())
-            {
-                TaskViewModel.Tasks = db.Tasks.ToList();
-            }
-            return View(TaskViewModel);
+            return View("Create", createTask);
         }
         public IActionResult Edit(int id)
         {
