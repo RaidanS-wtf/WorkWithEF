@@ -207,6 +207,7 @@
 -resource:"C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\obj\Debug\netcoreapp1.0\WorkWithEFdotnet-compile.deps.json",WorkWithEF.deps.json
 "C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Program.cs"
 "C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Startup.cs"
+"C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Controllers\BugController.cs"
 "C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Controllers\HomeController.cs"
 "C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Controllers\TaskController.cs"
 "C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Mapping\MappingProfile.cs"
@@ -224,5 +225,6 @@
 "C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Services\TaskService.cs"
 "C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Services\Intefaces\IBugService.cs"
 "C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Services\Intefaces\ITaskService.cs"
+"C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\ViewComponents\BugListViewComponent.cs"
 "C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\ViewModels\BugViewModel.cs"
 "C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\ViewModels\TaskViewModel.cs"

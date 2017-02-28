@@ -39,6 +39,7 @@ namespace WorkWithEF
         {
             services.AddTransient<DataSeeder>();
             services.AddScoped<ITaskService, TaskService>();
+            services.AddScoped<IBugService, BugService>();
             // добавляем контекст Task/Bug- Context в качестве сервиса в приложение
             services.AddEntityFrameworkSqlServer().AddDbContext<DataContext>();
             //services.AddEntityFrameworkSqlite().AddDbContext<DataContext>();

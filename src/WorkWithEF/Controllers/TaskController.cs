@@ -42,8 +42,12 @@ namespace WorkWithEF.Controllers
         [HttpPost]
         public IActionResult CommitEdit(TaskViewModel editTask)
         {
-            _taskService.EditTask(editTask);
-            return RedirectToAction("Index");
+            if (ModelState.IsValid)
+            {
+                _taskService.EditTask(editTask);
+                return RedirectToAction("Index");
+            }
+            return View("Edit", editTask);
         }
         public IActionResult Delete(int id)
         {

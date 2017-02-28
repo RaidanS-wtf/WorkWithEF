@@ -12,8 +12,8 @@ namespace WorkWithEF.ViewModels
         [Display(Name = "Название")]
         public string Name { get; set; }
         [Required(ErrorMessage = "Заполните описание")]
-        [MinLength(5, ErrorMessage = "Minimum length of designation should be 5 characters")]
-        [MaxLength(150, ErrorMessage = "Maximum length of designation should be 150 characters")]
+        [MinLength(5, ErrorMessage = "Minimum length of Description should be 5 characters")]
+        [MaxLength(150, ErrorMessage = "Maximum length of Description should be 150 characters")]
         public string Description { get; set; }
         [Required(ErrorMessage = "Укажите исполнителя")]
         public string Performer { get; set; }

@@ -8,7 +8,6 @@ namespace WorkWithEF.Models
 {
     public class Bug : BlankClass
     {
-        [Required]
         public string Author { get; set; }
     }
 }
