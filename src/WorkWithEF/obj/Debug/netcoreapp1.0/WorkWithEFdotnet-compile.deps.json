@@ -34,7 +34,8 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "1.1.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "1.1.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "1.2.0",
-          "AutoMapper": "5.2.0"
+          "AutoMapper": "5.2.0",
+          "Microsoft.EntityFrameworkCore": "1.1.0"
         },
         "compile": {
           "WorkWithEF.dll": {}
@@ -2997,7 +2998,8 @@
           "Microsoft.EntityFrameworkCore.SqlServer": "1.1.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "1.1.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "1.2.0",
-          "AutoMapper": "5.2.0"
+          "AutoMapper": "5.2.0",
+          "Microsoft.EntityFrameworkCore": "1.1.0"
         },
         "runtime": {
           "WorkWithEF.dll": {}

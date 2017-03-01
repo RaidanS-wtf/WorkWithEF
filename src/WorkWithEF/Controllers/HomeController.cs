@@ -38,9 +38,5 @@ namespace WorkWithEF.Controllers
         {
             return View();
         }
-        public ActionResult BugList()
-        {
-            return ViewComponent("BugList");
-        }
     }
 }

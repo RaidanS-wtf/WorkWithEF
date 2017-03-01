@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using WorkWithEF.Models;
 using WorkWithEF.ViewModels;
 using AutoMapper;
+using Microsoft.EntityFrameworkCore;
 
 namespace WorkWithEF.Services
 {
@@ -22,6 +24,12 @@ namespace WorkWithEF.Services
         {
             var bugs = _mapper.Map<IEnumerable<Bug>, IEnumerable<BugViewModel>>(_context.Bugs.ToList());
 
+            return bugs;
+        }
+        public async Task<IEnumerable<BugViewModel>> GetAllAsync()
+        {
+            var bugs = _mapper.Map<IEnumerable<Bug>, IEnumerable<BugViewModel>>(await _context.Bugs.ToListAsync());
+            //var model = await Context.Set<M>().ToListAsync();
             return bugs;
         }
         public BugViewModel GetOne(int bugId)

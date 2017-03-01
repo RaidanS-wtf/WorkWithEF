@@ -10,6 +10,7 @@ namespace WorkWithEF.Services
     public interface IBugService
     {
         IEnumerable<BugViewModel> GetAll();
+        Task<IEnumerable<BugViewModel>> GetAllAsync();
         BugViewModel GetOne(int bugId);
         void EditBug(BugViewModel editBug);
         void CreateBug(BugViewModel createBug);

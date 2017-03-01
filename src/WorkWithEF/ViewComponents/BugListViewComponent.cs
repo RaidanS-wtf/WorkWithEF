@@ -1,25 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using WorkWithEF.Services;
+using WorkWithEF.ViewModels;
 
 namespace WorkWithEF.ViewComponents
 {
     public class BugListViewComponent : ViewComponent
     {
-        public IViewComponentResult Invoke()
+        private readonly IBugService _bugService;
+        public BugListViewComponent(IBugService bugService)
         {
-            var data = GetSampleData();
-            return View(data);
+            _bugService = bugService;
         }
-
-        private List<string> GetSampleData()
+        public async Task<IViewComponentResult> InvokeAsync()
         {
-            List<string> data = new List<string>();
-            data.Add("One");
-            data.Add("Two");
-            data.Add("Three");
-            return data;
+            var bugs = await GetAllBugsAsync();
+            return View(bugs);
+        }
+        private Task<IEnumerable<BugViewModel>> GetAllBugsAsync()
+        {
+            return _bugService.GetAllAsync();
         }
     }
 }

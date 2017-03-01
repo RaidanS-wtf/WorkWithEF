@@ -1,6 +1,24 @@
-﻿<p>
-    This is a BugList web page <br />
+﻿<div>
+    This is a BugList view component <br />
     <div>
-        @Component.Invoke("BugList")
+
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Author</th>
+            </tr>
+
+            @foreach (var bug in Model)
+            {
+                <tr>
+                    <td>@bug.Name</td>
+                    <td>@bug.Description</td>
+                    <td>@bug.Author</td>
+                    <td><a href="/task/edit/@bug.Id">Edit bug</a></td>
+                </tr>
+            }
+
+        </table>
     </div>
-</p>
+</div>
