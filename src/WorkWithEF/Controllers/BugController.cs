@@ -17,7 +17,6 @@ namespace WorkWithEF.Controllers
         }
         public IActionResult Index()
         {
-            //var bugs = _bugService.GetAll();
             return View();
         }
     }

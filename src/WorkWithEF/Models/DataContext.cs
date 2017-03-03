@@ -10,6 +10,7 @@ namespace WorkWithEF.Models
     {
         public DbSet<Task> Tasks { get; set; }
         public DbSet<Bug> Bugs { get; set; }
+        public DbSet<Status> Statuses { get;set;}
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //optionsBuilder.UseSqlite("Filename=./tfs.db");

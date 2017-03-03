@@ -1,5 +1,5 @@
---temp-output:C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\obj\Debug\netcoreapp1.0\
---out:C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\bin\Debug\netcoreapp1.0\WorkWithEF.dll
+--temp-output:C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\obj\Debug\netcoreapp1.0\
+--out:C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\bin\Debug\netcoreapp1.0\WorkWithEF.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -208,27 +208,26 @@
 --reference:C:\Users\srogachev\.nuget\packages\System.Threading.Timer\4.3.0\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\srogachev\.nuget\packages\System.Xml.ReaderWriter\4.3.0\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\srogachev\.nuget\packages\System.Xml.XDocument\4.3.0\ref\netstandard1.3\System.Xml.XDocument.dll
---resource:"C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\obj\Debug\netcoreapp1.0\WorkWithEFdotnet-compile.deps.json",WorkWithEF.deps.json
-C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Program.cs
-C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Startup.cs
-C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Controllers\BugController.cs
-C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Controllers\HomeController.cs
-C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Controllers\TaskController.cs
-C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Mapping\MappingProfile.cs
-C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Migrations\20170208095319_InitialCreate.cs
-C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Migrations\20170208095319_InitialCreate.Designer.cs
-C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Migrations\20170209073443_UpdateCreate.cs
-C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Migrations\20170209073443_UpdateCreate.Designer.cs
-C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Migrations\DataContextModelSnapshot.cs
-C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Models\BlankClass.cs
-C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Models\Bug.cs
-C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Models\DataContext.cs
-C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Models\DataSeeder.cs
-C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Models\Task.cs
-C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Services\BugService.cs
-C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Services\TaskService.cs
-C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Services\Intefaces\IBugService.cs
-C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\Services\Intefaces\ITaskService.cs
-C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\ViewComponents\BugListViewComponent.cs
-C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\ViewModels\BugViewModel.cs
-C:\Users\srogachev\Documents\Visual Studio 2015\Projects\WorkWithEF\src\WorkWithEF\ViewModels\TaskViewModel.cs
+--resource:"C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\obj\Debug\netcoreapp1.0\WorkWithEFdotnet-compile.deps.json",WorkWithEF.deps.json
+C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Program.cs
+C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Startup.cs
+C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Controllers\BugController.cs
+C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Controllers\HomeController.cs
+C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Controllers\TaskController.cs
+C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Mapping\MappingProfile.cs
+C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Migrations\20170303090611_InitialCreate.cs
+C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Migrations\20170303090611_InitialCreate.Designer.cs
+C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Migrations\DataContextModelSnapshot.cs
+C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Models\BlankClass.cs
+C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Models\Bug.cs
+C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Models\DataContext.cs
+C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Models\DataSeeder.cs
+C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Models\Status.cs
+C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Models\Task.cs
+C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Services\BugService.cs
+C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Services\TaskService.cs
+C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Services\Intefaces\IBugService.cs
+C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\Services\Intefaces\ITaskService.cs
+C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\ViewComponents\BugListViewComponent.cs
+C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\ViewModels\BugViewModel.cs
+C:\Users\srogachev\documents\visual studio 2015\Projects\WorkWithEF\src\WorkWithEF\ViewModels\TaskViewModel.cs

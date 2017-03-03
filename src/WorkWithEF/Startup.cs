@@ -53,10 +53,11 @@ namespace WorkWithEF
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
 
-        
             app.UseStaticFiles();
-            //app.ApplicationServices.GetService<DataContext>().Database.Migrate();
-            //seeder.Seed();
+
+            app.ApplicationServices.GetService<DataContext>().Database.Migrate();
+            seeder.Seed();
+
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

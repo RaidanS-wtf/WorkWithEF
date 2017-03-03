@@ -13,7 +13,8 @@ namespace WorkWithEF.Migrations
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
             modelBuilder
-                .HasAnnotation("ProductVersion", "1.1.0-rtm-22752");
+                .HasAnnotation("ProductVersion", "1.1.0-rtm-22752")
+                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("WorkWithEF.Models.Bug", b =>
                 {
@@ -31,6 +32,18 @@ namespace WorkWithEF.Migrations
                     b.ToTable("Bugs");
                 });
 
+            modelBuilder.Entity("WorkWithEF.Models.Status", b =>
+                {
+                    b.Property<int>("StatusID")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("StatusTitle");
+
+                    b.HasKey("StatusID");
+
+                    b.ToTable("Statuses");
+                });
+
             modelBuilder.Entity("WorkWithEF.Models.Task", b =>
                 {
                     b.Property<int>("Id")
@@ -38,13 +51,24 @@ namespace WorkWithEF.Migrations
 
                     b.Property<string>("Description");
 
+                    b.Property<string>("Name");
+
                     b.Property<string>("Performer");
 
-                    b.Property<string>("Title");
+                    b.Property<int?>("StatusID");
 
                     b.HasKey("Id");
 
+                    b.HasIndex("StatusID");
+
                     b.ToTable("Tasks");
+                });
+
+            modelBuilder.Entity("WorkWithEF.Models.Task", b =>
+                {
+                    b.HasOne("WorkWithEF.Models.Status", "Status")
+                        .WithMany()
+                        .HasForeignKey("StatusID");
                 });
         }
     }

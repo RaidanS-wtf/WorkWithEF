@@ -18,10 +18,10 @@ namespace WorkWithEF.Models
             if (!_context.Tasks.Any())
             {
                 _context.Tasks.AddRange(
-                    new Task { Id = 1, Name = "NumverOne", Description = "First task", Performer="employee1" },
-                    new Task { Id = 2, Name = "NumverTwo", Description = "Second task", Performer = "employee1" },
-                    new Task { Id = 3, Name = "NumverThree", Description = "Third task", Performer = "employee2" },
-                    new Task { Id = 4, Name = "NumverFour", Description = "fourth task", Performer = "employee2" }
+                    new Task { Name = "NumverOne", Description = "First task", Performer="employee1" },
+                    new Task { Name = "NumverTwo", Description = "Second task", Performer = "employee1" },
+                    new Task { Name = "NumverThree", Description = "Third task", Performer = "employee2" },
+                    new Task { Name = "NumverFour", Description = "fourth task", Performer = "employee2" }
                 );
 
                 _context.SaveChanges();
@@ -30,10 +30,22 @@ namespace WorkWithEF.Models
             if (!_context.Bugs.Any())
             {
                 _context.Bugs.AddRange(
-                    new Bug { Id = 1, Name = "BugNumberOne", Description = "First Bug", Author = "employee7" },
-                    new Bug { Id = 2, Name = "BugNumberTwo", Description = "Second Bug", Author = "employee7" },
-                    new Bug { Id = 3, Name = "BugNumberThree", Description = "Third Bug", Author = "employee9" },
-                    new Bug { Id = 4, Name = "BugNumberFour", Description = "fourth Bug", Author = "employee9" }
+                    new Bug { Name = "BugNumberOne", Description = "First Bug", Author = "employee7" },
+                    new Bug { Name = "BugNumberTwo", Description = "Second Bug", Author = "employee7" },
+                    new Bug { Name = "BugNumberThree", Description = "Third Bug", Author = "employee9" },
+                    new Bug { Name = "BugNumberFour", Description = "fourth Bug", Author = "employee9" }
+                );
+
+                _context.SaveChanges();
+            }
+
+            if (!_context.Statuses.Any())
+            {
+                _context.Statuses.AddRange(
+                    new Status { StatusTitle = "In work" },
+                    new Status { StatusTitle = "Pending" },
+                    new Status { StatusTitle = "Ready" },
+                    new Status { StatusTitle = "Done" }
                 );
 
                 _context.SaveChanges();
