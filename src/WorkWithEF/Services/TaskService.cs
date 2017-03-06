@@ -21,13 +21,11 @@ namespace WorkWithEF.Services
         public IEnumerable<TaskViewModel> GetAll()
         {
             var tasks = _mapper.Map<IEnumerable<Task>, IEnumerable<TaskViewModel>>(_context.Tasks.ToList());
-
             return tasks;
         }
         public TaskViewModel GetOne(int taskId)
         {
             var task = _context.Tasks.First(oneTask => oneTask.Id == taskId);
-
             var currentTask = _mapper.Map<Task, TaskViewModel>(task);
             return currentTask;
         }
@@ -54,7 +52,11 @@ namespace WorkWithEF.Services
             _context.Tasks.Remove(foundedTask);
             _context.SaveChanges();
         }
-
+        public IEnumerable<Status> GetAllStatuses()
+        {
+            var statuses = _context.Statuses.ToList();
+            return statuses;
+        }
     }
 }
 

@@ -5,19 +5,34 @@
     <input asp-for="Id" type="hidden" />
     <table>
         <tr>
-            <td><label asp-for="Name"></label></td>
-            <td><input asp-for="Name" /></td>
-            <td><span asp-validation-for="Name" style="color:red"></span></td>
+            <td>@Html.LabelFor(m => m.Name)</td>
+            <td>@Html.EditorFor(m => m.Name)</td>
+            <td><span style="color:red">@Html.ValidationMessageFor(m => m.Name)</span></td>
         </tr>
         <tr>
-            <td><label asp-for="Description"></label> </td>
-            <td><input asp-for="Description" /></td>
-            <td><span asp-validation-for="Description" style="color:red"></span> </td>
+            <td>@Html.LabelFor(m => m.Description)</td>
+            <td>@Html.EditorFor(m => m.Description)</td>
+            <td><span style="color:red">@Html.ValidationMessageFor(m => m.Description)</span></td>
         </tr>
         <tr>
-            <td><label asp-for="Performer"></label></td>
-            <td><input asp-for="Performer"></td>
-            <td> <span asp-validation-for="Performer" style="color:red"></span> </td>
+            <td>@Html.LabelFor(m => m.Performer)</td>
+            <td>@Html.EditorFor(m => m.Performer)</td>
+            <td><span style="color:red">@Html.ValidationMessageFor(m => m.Performer)</span></td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(m => m.Status)</td>
+            <td>
+                @foreach (string availStatus in ViewBag.AvailStatuses)
+                {
+                    <p>@availStatus</p>
+                }
+            </td>
+           @* <td> <span style="color:red">@Html.ValidationMessageFor(m => m.Status)</span> </td>
+    <asp:DropDownList ID="ddlGender" runat="server" Width="200px">
+        <asp:ListItem Text="Select Gender" Value="0"></asp:ListItem>
+        <asp:ListItem Text="Male" Value="1"></asp:ListItem>
+        <asp:ListItem Text="Female" Value="2"></asp:ListItem>
+    </asp:DropDownList>*@
         </tr>
         <tr>
             <td colspan="2"><input type="submit" id="submitbutton" value="Edit" /></td>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.ComponentModel.DataAnnotations;
+using WorkWithEF.Models;
 
 namespace WorkWithEF.ViewModels
 {
@@ -17,5 +18,6 @@ namespace WorkWithEF.ViewModels
         public string Description { get; set; }
         [Required(ErrorMessage = "Укажите исполнителя")]
         public string Performer { get; set; }
+        public Status Status { get; set; }
     }
 }

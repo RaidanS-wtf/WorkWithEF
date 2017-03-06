@@ -37,6 +37,7 @@ namespace WorkWithEF.Controllers
         public IActionResult Edit(int id)
         {
             var currentTask = _taskService.GetOne(id);
+            ViewBag.AvailStatuses = new List<Status>(_taskService.GetAllStatuses());
             return View(currentTask);
         }
         [HttpPost]
