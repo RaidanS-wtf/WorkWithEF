@@ -22,17 +22,14 @@
         <tr>
             <td>@Html.LabelFor(m => m.Status)</td>
             <td>
-                @foreach (string availStatus in ViewBag.AvailStatuses)
-                {
-                    <p>@availStatus</p>
-                }
+                <select asp-for="Status">
+                    @foreach (WorkWithEF.Models.Status availStatus in ViewBag.AvailStatuses)
+                    {
+                    <option value="@availStatus.StatusID" >@availStatus.StatusTitle</option>
+                    }
+                </select>
             </td>
-           @* <td> <span style="color:red">@Html.ValidationMessageFor(m => m.Status)</span> </td>
-    <asp:DropDownList ID="ddlGender" runat="server" Width="200px">
-        <asp:ListItem Text="Select Gender" Value="0"></asp:ListItem>
-        <asp:ListItem Text="Male" Value="1"></asp:ListItem>
-        <asp:ListItem Text="Female" Value="2"></asp:ListItem>
-    </asp:DropDownList>*@
+            <td> <span style="color:red">@Html.ValidationMessageFor(m => m.Status)</span> </td>
         </tr>
         <tr>
             <td colspan="2"><input type="submit" id="submitbutton" value="Edit" /></td>
